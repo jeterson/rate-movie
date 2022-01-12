@@ -1,0 +1,39 @@
+.j-navbar {
+  background-color: var(--color-primary);
+  height: 60px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.j-title {
+  color: #fff;
+  margin-left: 33px;
+  height: 33px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.j-user {
+  margin-right: 69px;
+  display: flex;
+}
+
+.j-icon {
+  width: 24px;
+  height: 23.41px;
+  font-size: 12px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.j-name {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+
+}
