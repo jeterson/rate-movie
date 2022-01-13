@@ -2,6 +2,7 @@ import { ReactComponent as StarFull } from 'assets/images/star-full.svg'
 import { ReactComponent as StarHalf } from 'assets/images/star-half.svg'
 import { ReactComponent as StarEmpty } from 'assets/images/star-empty.svg'
 import { HtmlHTMLAttributes } from 'react'
+import {Link} from 'react-router-dom'
 import './style.css'
 const movie = {
   id: 1,
@@ -44,7 +45,7 @@ export default function MovieCard(props: MovieCardProps) {
         </div>
 
         <div className="j-movie-card-action">
-          <button>Avaliar</button>
+          <Link to={`/form/${movie.id}`}>Avaliar</Link>
         </div>
 
       </div>

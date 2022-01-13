@@ -1,4 +1,6 @@
 import './style.css'
+import {useNavigate} from 'react-router-dom'
+import { FormEvent, ReactEventHandler } from 'react';
 const movie = {
   id: 1,
   image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
@@ -8,6 +10,12 @@ const movie = {
 };
 
 export default function Form() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault()
+    navigate('/')
+  }
   return (
     <div className="j-page">
       <div className="j-card">
@@ -15,7 +23,7 @@ export default function Form() {
           <img className="j-image" src={movie.image} />
         </div>
         <div className="j-form-title">{movie.title}</div>
-        <form className="j-form">
+        <form className="j-form" onSubmit={handleSubmit}>
 
           <div className="j-input-container">
             <label htmlFor="email">Informe seu email</label>
@@ -35,7 +43,7 @@ export default function Form() {
           <div className="j-spacing-lg" />
         <div className="j-form-actions">
           <button>Salvar</button>
-          <button type="button">Cancelar</button>
+          <button onClick={() => navigate('/')} type="button">Cancelar</button>
         </div>
         </form>
       </div>

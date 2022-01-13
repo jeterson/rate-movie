@@ -64,7 +64,7 @@
   justify-content: center;
 }
 
-.j-movie-card-action button {
+.j-movie-card-action a {
   border: none;
   background-color: var(--color-primary);
   color: white;
@@ -72,12 +72,15 @@
   width: 180px;
   height: 40px;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.j-movie-card-action button:hover{
+.j-movie-card-action a:hover{
   filter: brightness(0.9);
 }
 
-.j-movie-card-action button:active{
+.j-movie-card-action a:active{
   transform: translateY(2px);
 }
