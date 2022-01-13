@@ -32,7 +32,7 @@ export default function MovieCard(props: MovieCardProps) {
     <div {...props} className="j-movie-card-container" >
       <div className="j-movie-card-box">
         <div className="j-movie-card-image-container">
-          <img src={movie.image} />
+          <img alt={movie.title} src={movie.image} />
         </div>
         <div className="j-movie-card-title">
           <span>{movie.title}</span>
@@ -42,7 +42,7 @@ export default function MovieCard(props: MovieCardProps) {
         </div>
         <div className="j-movie-card-stars">
           <MovieStars />
-          <span>{`${movie.count} ${movie.count == 1 ? ' avaliação' : ' avaliações'}`}</span>
+          <span>{`${movie.count} ${movie.count === 1 ? ' avaliação' : ' avaliações'}`}</span>
         </div>
 
         <div className="j-movie-card-action">

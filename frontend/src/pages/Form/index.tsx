@@ -1,6 +1,6 @@
 import './style.css'
 import {useNavigate} from 'react-router-dom'
-import { FormEvent, ReactEventHandler } from 'react';
+import { FormEvent } from 'react';
 const movie = {
   id: 1,
   image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
@@ -20,7 +20,7 @@ export default function Form() {
     <div className="j-page">
       <div className="j-card">
         <div className="j-image-container">
-          <img className="j-image" src={movie.image} />
+          <img alt={movie.title} className="j-image" src={movie.image} />
         </div>
         <div className="j-form-title">{movie.title}</div>
         <form className="j-form" onSubmit={handleSubmit}>
