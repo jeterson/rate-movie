@@ -13,8 +13,9 @@ const movie = {
 };
 
 export type MovieCardProps = HtmlHTMLAttributes<HTMLElement> & {}
+export type MovieStarsProps = HtmlHTMLAttributes<HTMLElement> & {}
 
-function MovieStars() {
+function MovieStars(props: MovieStarsProps) {
   return (
     <div className="j-movie-stars-container">
       <StarFull />
