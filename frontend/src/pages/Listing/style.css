@@ -1,0 +1,26 @@
+.j-listing-page{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-bottom: 15px;
+
+}
+
+.j-listing-pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.j-listing-pagination-container {
+  margin-bottom: 15px;
+}
+.j-listing-page-container {      
+  display: inline-flex;
+  flex-wrap: wrap;
+  
+  gap: 55px;  
+}
