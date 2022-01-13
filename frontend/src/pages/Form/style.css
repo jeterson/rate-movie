@@ -1,0 +1,100 @@
+.j-page {
+  width: 100%;
+  height: calc(100vh + 60px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  
+}
+
+.j-card {
+  width: 480px;
+  background: #fff;
+  margin-top: 40px;
+  border-radius: 8px;  
+}
+
+.j-image-container img {
+  height: 270px;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.j-form-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20.83px;
+  padding-bottom: 22px;
+  font-weight: 700;
+  color: #4a4a4a;
+  line-height: 17.7px;
+  font-size: 13px;
+}
+
+.j-form {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 19px;
+  padding-right: 20px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.j-spacing {
+  height: 13px;
+}
+
+.j-spacing-lg {
+  height: 28px;
+}
+.j-input-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.j-input-container input,select {
+  border: 1px solid #9e9e9e;
+  border-radius: 4px;
+  height: 41px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.j-input-container label {
+  font-size: 12px;
+  line-height: 16.34px;
+  color: #aaaaaa;
+}
+
+.j-form-actions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.j-form-actions button {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  margin-bottom: 20px;
+  width: 180px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+
+.j-form-actions button:hover  {
+  filter: brightness(0.9);
+}
+
+.j-form-actions button:active  {
+  transform: translateY(1px);
+}
