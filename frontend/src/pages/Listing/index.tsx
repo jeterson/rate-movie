@@ -5,12 +5,13 @@ import { useEffect, useState } from "react";
 import { MoviePage } from "types/movie";
 import { BASE_URL } from "utils/request";
 import './style.css'
+
 export default function Listing() {  
   const [page, setPage] = useState<MoviePage|undefined>()
   const [pageNumber, setPageNumber] = useState(0)
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/movies?pageNumber${pageNumber}`)
+    axios.get(`${BASE_URL}/movies?pageNumber${pageNumber}&sort=title`)
     .then(res => {
       setPage(res.data as MoviePage)
     })
@@ -30,15 +31,11 @@ export default function Listing() {
         <Pagination onNext={() => handleNextPage()} onPrev={() => handlePrevPage()} page={page} />
       </div>
       <div className="j-listing-page-container">
-        <MovieCard className="j-movie-card-item" />
-        <MovieCard className="j-movie-card-item" />
-        <MovieCard className="j-movie-card-item" />
-        <MovieCard className="j-movie-card-item" />
-        <MovieCard className="j-movie-card-item" />
-        <MovieCard className="j-movie-card-item" />
-        <MovieCard className="j-movie-card-item" />
-        
-        
+        {
+          page?.content.map(movie => {
+            return <MovieCard key={movie.id} movie={movie} />
+          })
+        }               
       </div>
     </div>
   )

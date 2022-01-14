@@ -4,15 +4,11 @@ import { ReactComponent as StarEmpty } from 'assets/images/star-empty.svg'
 import { HtmlHTMLAttributes } from 'react'
 import {Link} from 'react-router-dom'
 import './style.css'
-const movie = {
-  id: 1,
-  image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
-  title: "The Witcher",
-  count: 2,
-  score: 4.5
-};
+import { Movie } from 'types/movie'
 
-export type MovieCardProps = HtmlHTMLAttributes<HTMLElement> & {}
+type MovieCardProps = HtmlHTMLAttributes<HTMLElement> & {
+  movie: Movie
+}
 export type MovieStarsProps = HtmlHTMLAttributes<HTMLElement> & {}
 
 function MovieStars(props: MovieStarsProps) {
@@ -27,7 +23,7 @@ function MovieStars(props: MovieStarsProps) {
   )
 }
 
-export default function MovieCard(props: MovieCardProps) {
+export default function MovieCard({movie, ...props}: MovieCardProps) {
   return (
     <div {...props} className="j-movie-card-container" >
       <div className="j-movie-card-box">

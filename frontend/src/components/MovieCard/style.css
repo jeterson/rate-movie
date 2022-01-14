@@ -20,6 +20,7 @@
   margin-top: 9.66px;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .j-movie-card-title span {
