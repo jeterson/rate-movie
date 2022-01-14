@@ -11,7 +11,7 @@ export default function Listing() {
   const [pageNumber, setPageNumber] = useState(0)
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/movies?pageNumber${pageNumber}&sort=title`)
+    axios.get(`${BASE_URL}/movies?pageNumber${pageNumber}&sort=id`)
     .then(res => {
       setPage(res.data as MoviePage)
     })
