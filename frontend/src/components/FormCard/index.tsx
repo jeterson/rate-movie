@@ -1,20 +1,14 @@
 import './style.css'
 import { useNavigate } from 'react-router-dom'
-import { FormEvent, useState } from 'react';
 import { Movie } from 'types/movie';
 import axios from 'axios';
 import { BASE_URL } from 'utils/request';
-import { validateEmail } from 'utils/validations';
+
 
 
 
 type FormCardProps = {
   movie?: Movie
-}
-
-type ScoreForm = {
-  email: string,
-  score: number
 }
 export default function FormCard({ movie }: FormCardProps) {
   const navigate = useNavigate();

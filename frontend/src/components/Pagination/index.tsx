@@ -2,7 +2,6 @@ import './style.css'
 import { ReactComponent as PrevIcon } from 'assets/images/prev-icon.svg'
 import { ReactComponent as NextIcon } from 'assets/images/next-icon.svg'
 import { MoviePage } from 'types/movie'
-import { useState } from 'react'
 
 type PaginationProps = {
   page: MoviePage,
