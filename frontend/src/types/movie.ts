@@ -17,3 +17,17 @@ export type MoviePage = {
   numberOfElements: number;
   empty: boolean;
 }
+
+export const moviePageDefault = (): MoviePage => {
+  return {
+    content: [],
+    last: true,
+    totalPages: 0,
+    totalElements: 0,
+    size: 12,
+    number: 0,
+    first: false,
+    numberOfElements: 0,
+    empty: true
+  }
+}
